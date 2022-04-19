@@ -8,7 +8,7 @@
     <head>
         <?php require_once('../html/MainHead.php'); ?>
 
-        <title> Home | Correo Masivos</title>
+        <title> Inicio | Correo Masivos</title>
     </head>
 
     <body>
@@ -26,14 +26,12 @@
             
             <!-- Breadcrumb Area -->
             <div class="breadcrumb-area">
-                <h1>Dashboard</h1>
+                <h1>Inicio</h1>
 
                 <ol class="breadcrumb">
-                    <li class="item"><a href="dashboard-analytics.html"><i class='bx bx-home-alt'></i></a></li>
+                    <li class="item"><a href="../home/"><i class='bx bx-home-alt'></i></a></li>
 
-                    <li class="item">Dashboard</li>
-
-                    <li class="item">Blank Page</li>
+                    <li class="item">Inicio</li>
                 </ol>
             </div>
             <!-- End Breadcrumb Area -->
@@ -49,6 +47,8 @@
         <!-- End Main Content Wrapper Area -->
         
         <?php require_once('../html/MainJs.php'); ?>
+        <script src="home.js" ></script>
+
     </body>
 </html>
 

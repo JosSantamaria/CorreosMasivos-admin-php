@@ -3,7 +3,7 @@
             <div class="sidemenu-header">
                 <a href="dashboard-analytics.html" class="navbar-brand d-flex align-items-center">
                     <img src="..\..\public\assets\img\small-logo.png" alt="image">
-                    <span>Fiva</span>
+                    <span>CM-PHP</span>
                 </a>
 
                 <div class="burger-menu d-none d-lg-block">
@@ -24,29 +24,45 @@
                     
 
                     <li class="nav-item-title">
-                        Apps
+                        Menu
                     </li>
 
                     <li class="nav-item">
-                        <a href="app-chat.html" class="nav-link">
-                            <span class="icon"><i class='bx bx-message'></i></span>
-                            <span class="menu-title">Chat</span>
+                        <a href="../home/" class="nav-link">
+                            <span class="icon"><i class='bx bx-home'></i></span>
+                            <span class="menu-title">Inicio</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="app-todo.html" class="nav-link">
-                            <span class="icon"><i class='bx bx-badge-check'></i></span>
-                            <span class="menu-title">Todo</span>
+                        <a href="../mnt-usuario" class="nav-link">
+                            <span class="icon"><i class='bx bx-user'></i></span>
+                            <span class="menu-title">Usuarios</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="app-calendar.html" class="nav-link">
+                        <a href="../mnt-producto" class="nav-link">
                             <span class="icon"><i class='bx bx-calendar'></i></span>
-                            <span class="menu-title">Calendar</span>
+                            <span class="menu-title">Productos</span>
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="../prcs_enivarcorreo/" class="nav-link">
+                            <span class="icon"><i class='bx bx-envelope'></i></span>
+                            <span class="menu-title">Enviar Correos</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="./logout.php" class="nav-link">
+                            <span class="icon text-danger"><i class='bx bx-log-out'></i></span>
+                            <span class="menu-title text-danger">Cerrar Sesion</span>
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
         </div>

@@ -24,18 +24,18 @@
                             <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="menu-profile">
                                     <span class="name">Hola! <?php echo $_SESSION['usr_nom']; ?> </span>
-                                    <img src="..\..\public\assets\img\user1.jpg" class="rounded-circle" alt="image">
+                                    <img src="..\..\public\assets\img\70x70.jpg" class="rounded-circle" alt="image">
                                 </div>
                             </a>
 
                             <div class="dropdown-menu">
                                 <div class="dropdown-header d-flex flex-column align-items-center">
                                     <div class="figure mb-3">
-                                        <img src="..\..\public\assets\img\user1.jpg" class="rounded-circle" alt="image">
+                                        <img src="..\..\public\assets\img\70x70.jpg" class="rounded-circle" alt="image">
                                     </div>
 
                                     <div class="info text-center">
-                                        <span class="name"><?php echo $_SESSION['usr_nom']; ?></span>
+                                        <span class="name"><?php echo $_SESSION['usr_nom']." ".$_SESSION['usr_ape_p']; ?></span>
                                         <p class="mb-3 email"><?php echo $_SESSION['usr_correo']; ?></p>
                                     </div>
                                 </div>

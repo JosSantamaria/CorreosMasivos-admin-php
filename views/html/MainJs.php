@@ -35,3 +35,8 @@
 <script src="..\..\public\assets\js\jvectormap-world-mill-en.js"></script>
 <!-- Custom JS -->
 <script src="..\..\public\assets\js\custom.js"></script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+<!-- sweetalert 2 -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

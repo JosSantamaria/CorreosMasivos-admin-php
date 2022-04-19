@@ -8,7 +8,7 @@
     <head>
         <?php require_once('../html/MainHead.php'); ?>
 
-        <title> Productos | Correo Masivos</title>
+        <title> Correo | Correo Masivos</title>
     </head>
 
     <body>
@@ -26,12 +26,12 @@
             
             <!-- Breadcrumb Area -->
             <div class="breadcrumb-area">
-                <h1>Productos</h1>
+                <h1>Correos</h1>
 
                 <ol class="breadcrumb">
                     <li class="item"><a href="../home/"><i class='bx bx-home-alt'></i></a></li>
 
-                    <li class="item">Mantenimiento de Productos</li>
+                    <li class="item">Enviar Correos</li>
                 </ol>
             </div>
             <!-- End Breadcrumb Area -->
@@ -47,7 +47,7 @@
         <!-- End Main Content Wrapper Area -->
         
         <?php require_once('../html/MainJs.php'); ?>
-        <script src="mnt-producto.js" ></script>
+        <script src="prcs_enviarcorreo.js" ></script>
 
     </body>
 </html>

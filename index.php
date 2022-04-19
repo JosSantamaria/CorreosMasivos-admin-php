@@ -1,3 +1,18 @@
+
+<?php /** //TODO! llamado a cadena de conexion (PDO) */
+    require_once('config/conexion.php');
+    if ( isset($_POST['enviar']) && $_POST['enviar'] == 'si' ) {
+        require_once('models/mdl_Usuario.php');
+
+        $usuario = new Usuario();
+        $usuario->login();
+    
+    }
+
+    // var_dump($_SESSION);
+?>
+
+
 <!doctype html>
 <html lang="es">
     <head>
@@ -25,19 +40,48 @@
                 <div class="d-table-cell">
                     <div class="login-form">
                         <div class="logo">
-                            <a href="dashboard-analytics.html"><img src="public\assets\img\logo.png" alt="image"></a>
+                            <a href="dashboard-analytics.html">
+                                <img src="public\assets\img\logo.png" alt="image">
+                            </a>
                         </div>
 
                         <h2>Bienvenido</h2>
 
-                        <form>
+                        <form action="" method="POST">
+                            <?php /** Apertura */
+                            if(isset($_GET['m']) ){ 
+                                        switch ($_GET['m']) {
+                                            case '1':
+                                             /** Cierre */   ?>
+                                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                            <strong>¡Error!</strong> Usuario o Contraseña Incorrectos.
+                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                            <?php
+                                                break;
+                                            
+                                            case '2':
+                                                /** Cierre */?>
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <strong>¡Advertencia!</strong> Los Campos no pueden estar vacios.
+                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                            <?php /** Apertura */
+                                                break;
+                                        }
+                            } 
+                                ?>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="usr_email" placeholder="Correo Electronico">
+                                <input type="email" class="form-control" id="usr_correo" name="usr_correo" placeholder="Correo Electronico">
                                 <span class="label-title"><i class='bx bx-user'></i></span>
                             </div>
 
                             <div class="form-group">
-                                <input type="password" class="form-control" name="usr_password" placeholder="Contraseña">
+                                <input type="password" class="form-control" id="usr_pass" name="usr_pass" placeholder="Contraseña">
                                 <span class="label-title"><i class='bx bx-lock'></i></span>
                             </div>
 
@@ -52,7 +96,8 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="login-btn">Inicio de Sesion</button>
+                            <input type="hidden" name="enviar" value="si" >
+                            <button type="submit" class="login-btn">Acceder</button>
 
                             <p class="mb-0">Aun no tienes cuenta? <a href="register-with-image.html">Registrate</a></p>
                         </form>

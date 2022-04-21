@@ -54,8 +54,8 @@ function eliminar(usr_id)
                 text: "Estas Seguro de Eliminar el Usuario?",
                 icon: 'error',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#EF0000',
+                cancelButtonColor: '#C89C04',
                 cancelButtonText: 'No',
                 confirmButtonText: 'Si'
         }).then((result) => {
@@ -75,6 +75,37 @@ function eliminar(usr_id)
                         )
                 }
         })
-
     
+}
+
+function habilitar(usr_id)
+{
+    console.log(usr_id);
+    Swal.fire({
+                title: 'Habilitar Usuario',
+                text: "Estas Seguro de Habilitar el Usuario?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#08CD05',
+                cancelButtonColor: '#EF0000',
+                cancelButtonText: 'No',
+                confirmButtonText: 'Si'
+        }).then((result) => 
+        {
+                if (result.isConfirmed) 
+                {   
+                    $.post("../../controller/ctrl_usuario.php?op=habilitar", {usr_id:usr_id},
+                        function(data){} //funcion por defecto
+                        );
+                    
+                        $('#usuarios_data').DataTable().ajax.reload();
+
+                    //Disparador de el Success de operacion eliminar
+                    Swal.fire(
+                        'Habilitado!',
+                        'El usuario ha sido habilitado.',
+                        'success'
+                        )
+                }
+        })
 }

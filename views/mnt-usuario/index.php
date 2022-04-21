@@ -45,14 +45,17 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Correo Electronico</th>
+                                    <th>Estado</th>
                                     <th>Accion</th>
-
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td></td>
                                     <td></td>
+                                    <td></td>
+                                    <td></td>
+
                                 </tr>
                             </tbody>
                     </table>

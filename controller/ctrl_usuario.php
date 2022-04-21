@@ -14,7 +14,22 @@
                 $sub_array = array();
                 $sub_array[] = $row['usr_id']; //Id de Usuario
                 $sub_array[] = $row['usr_correo']; //Correo de Usuario
-                $sub_array[] = '<button type="button" onClick="eliminar('.$row['usr_id'].')" id="'.$row['usr_id'].'" class="btn btn-outline-danger"><i class="bx bx-trash"></i></button>'; //Boton de accion eliminar
+
+                if ( $row['est']==1 ) {
+                    $sub_array[] = "<span class='badge badge-pill badge-success'> Subscrito</span>";
+                } else {
+                    $sub_array[] = "<span class='badge badge-pill badge-danger'> No Subscrito</span>";
+
+                }
+                
+                if ( $row['est']==1 ) {
+                    $sub_array[] = '<button type="button" label="Eliminar Usuario" onClick="eliminar('.$row['usr_id'].')" id="'.$row['usr_id'].'" class="btn btn-outline-danger"><i class="bx bx-trash"></i></button>'; //Boton de accion eliminar
+                } else { //considerar el eliminar y deshabilitar el boton
+                    $sub_array[] = '<button type="button" label="Habilitar Usuario" onClick="habilitar('.$row['usr_id'].')" id="'.$row['usr_id'].'" class="btn btn-outline-primary"><i class="bx bx-badge-check"></i></button>'; //Boton de accion eliminar
+
+                }
+
+               
 
                 $data[] = $sub_array; //Agregamos los datos de cada fila a la variable data
             }
@@ -33,5 +48,8 @@
             $mdlUsuario->eliminarUsuario($_POST["usr_id"]);
             break;
 
+            case "habilitar":
+                $mdlUsuario->habilitarUsuario($_POST["usr_id"]);
+                break;
     }
 

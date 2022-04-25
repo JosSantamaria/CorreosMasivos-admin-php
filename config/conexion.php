@@ -1,4 +1,9 @@
 <?php
+/** //TODO! Se habilitaron los errores, se cambio la conexion a DB y cotejamiento de conexion a utf8_spanish_ci : debug de error datatable tn/1 (JSON responde Invalida)*/
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 /** //TODO! Inicializacion de Variable de Sesion */
 session_start();
 /**TODO: Clase para conexion con PDO */
@@ -20,7 +25,7 @@ session_start();
 
         /** //TODOImpedimos problemas con las ñ o ´ tildes usando utf8*/
         public function set_names(){
-            return $this->conexion()->query("SET NAMES 'utf8'");
+            return $this->dbh->query("SET NAMES 'utf8'");
         }
         /** //TODO! Ruta principal del proyecto  */
         public static function ruta(){

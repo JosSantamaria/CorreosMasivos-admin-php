@@ -5,11 +5,11 @@
     $mdlUsuario = new Usuario();
 
     /** Listar todos los usuarios */
-    switch ($_GET["op"]) {
+    switch ($_GET["op"]){
+ 
         case "listar":
-        $datos = $mdlUsuario->listarUsuarios();
-
-        $data = array();
+            $datos = $mdlUsuario->listarUsuarios();
+            $data = array();
             foreach ($datos as $row) { //Obtenemos los datos de cada fila para la tabla
                 $sub_array = array();
                 $sub_array[] = $row['usr_id']; //Id de Usuario
@@ -29,20 +29,19 @@
 
                 }
 
-               
-
                 $data[] = $sub_array; //Agregamos los datos de cada fila a la variable data
             }
-            $resultados = array(
+
+        $resultados = array(
                                 "sEcho"=>1, //Informacion para el datatable
                                 "iTotalRecords"=>count($datos), //enviamos el total registros al datatable
                                 "iTotalDisplayRecords"=>count($datos), //enviamos el total registros a visualizar
                                 "aaData"=>$data
                             );
 
-            echo json_encode($resultados);
+           echo json_encode($resultados);
             break;
-        
+
             /** //TODO Eliminar Usuario  */
         case "eliminar":
             $mdlUsuario->eliminarUsuario($_POST["usr_id"]);
@@ -53,3 +52,4 @@
                 break;
     }
 
+?>

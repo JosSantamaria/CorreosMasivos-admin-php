@@ -34,6 +34,34 @@
                     <li class="item">Mantenimiento de Productos</li>
                 </ol>
             </div>
+
+            <div class="card mb-30">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3>Listado de Productos</h3>
+                    </div>
+
+                <div class="card-body">
+                    <table id="productos_data" class="table display responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Descuento</th>
+                                    <th>Cupon</th>
+                                    <th>Estado</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                </tr>
+                            </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+
             <!-- End Breadcrumb Area -->
 
             <div class="flex-grow-1"></div>
@@ -47,7 +75,7 @@
         <!-- End Main Content Wrapper Area -->
         
         <?php require_once('../html/MainJs.php'); ?>
-        <script src="mnt-producto.js" ></script>
+        <script type="text/javascript" src="./mnt-producto.js" ></script>
 
     </body>
 </html>
